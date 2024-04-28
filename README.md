@@ -1,4 +1,4 @@
-### Boston House Pricing Prediction
+### LC-50 Value Prediction
 
 ### Software And Tools Requirements
 
@@ -10,5 +10,14 @@
 Create a new environment
 
 ```
-conda create -p venv python==3.7 -y
+conda create -p venv python==3.8 -y
+
+```
+Install all the requirements
+```
+pip install requirements.txt
+```
+Run the application
+```
+python app.py
 ```
