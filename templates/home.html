@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="static\styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <div class="login">
+    <h1>LC50 Value Prediction</h1>
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+
+      <div class="form-group mb-3">
+        <label for="CIC0"> Set of indices of neighbourhood symmetry </label>
+        <input class="form-control" type="text" name="CIC0" placeholder="CIC0" required="required" id="CIC0" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="SM1_Dz(Z)">Set of descriptors calculated from 2D matrices derived from the molecular graph (2D
+          matrix-based descriptors)</label>
+        <input class="form-control" type="text" name="SM1_Dz(Z)" placeholder="SM1_Dz(Z)" required="required"
+          id="SM1_Dz(Z)" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="GATS1i">2D Geary autocorrelation descriptor</label>
+        <input class="form-control" type="text" name="GATS1i" placeholder="GATS1i" required="required" id="GATS1i" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="NdsCH">Count the number of unsaturated sp2 carbon atoms of the type =CH-</label>
+        <input class="form-control" type="text" name="NdsCH" placeholder="NdsCH" required="required" id="NdsCH" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="NdssC">Count the number of unsaturated sp2 carbon atoms of the type =C</label>
+        <input class="form-control" type="text" name="NdssC" placeholder="NdssC" required="required" id="NdssC" />
+      </div>
+      <div class="form-group mb-3">
+        <label for="MLOGP">The octanol-water partitioning coefficient (log P) calculated by means of the Moriguchi
+          model</label>
+        <input class="form-control" type="text" name="MLOGP" placeholder="MLOGP" required="required" id="MLOGP" />
+      </div>
+
+
+      <div class="container">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </div>
+    </form>
+
+    <br>
+    <br>
+
+
+  </div>
+  {{prediction_text}}
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

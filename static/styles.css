@@ -1,0 +1,19 @@
+.login {
+    width: 30%;
+    margin: auto;
+}
+
+form {
+    display: inline-block
+}
+
+body {
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: 5px;
+    width: 100%;
+    height: 30px;
+}
