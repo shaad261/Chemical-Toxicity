@@ -17,3 +17,8 @@ input {
     width: 100%;
     height: 30px;
 }
+.centered-prediction {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;   }
+  
