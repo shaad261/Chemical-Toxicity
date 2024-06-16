@@ -27,10 +27,10 @@ MLOGP - molecular properties
 LC50 - Lethal concentration 50 (LC50) is the amount of a substance suspended in the water required to kills 50% of a test animals during a predetermined observation period. LC50 values are frequently used as a general indicator of a substance's acute toxicity.
 
 ## Project Demonstration
-Check out the project demo at 
+Check out the project demo at "https://youtu.be/FKnlSDkdIlU"
 
 ## Deployed app link
-Check out the deployed app at 
+Check out the deployed app at "http://lc50val-env.eba-iarprm27.ap-south-1.elasticbeanstalk.com/"
 
 
 
@@ -51,7 +51,7 @@ conda create -p venv python==3.8 -y
 ```
 Install all the requirements
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 Run the application
 ```
