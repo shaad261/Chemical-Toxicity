@@ -9,6 +9,8 @@ form {
 
 body {
     text-align: center;
+    background-color: rgb(83, 212, 255);
+
 }
 
 input {
@@ -21,4 +23,18 @@ input {
     text-align: center;
     font-weight: bold;
     font-size: 1.2em;   }
+input.form-control {
+        background-color: #e0f7fa; /* Light blue background for inputs */
+        border: 1px solid #b0bec5; /* Light grey border */
+        border-radius: 4px; /* Rounded corners */
+        padding: 10px; /* Inner padding */
+        margin-bottom: 10px; /* Space between inputs */
+      }
+      
+input.form-control:focus {
+        outline: none; /* Remove default outline */
+        border-color: #4fc3f7; /* Light blue border on focus */
+        box-shadow: 0 0 5px #4fc3f7; /* Light blue shadow on focus */
+      }
+      
   
